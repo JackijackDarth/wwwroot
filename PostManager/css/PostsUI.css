@@ -1,0 +1,122 @@
+
+.PostRow {
+    padding: 8px;
+    padding-bottom: 0px;
+   /* scroll-snap-align: start; */
+   justify-items: center;
+  
+}
+
+.PostContainer {
+    display: grid;
+    grid-template-columns:auto;
+    background-color: #eee;
+    
+}
+
+.PostContainer .cmdIcon {
+    display: none;
+}
+
+.PostContainer:hover .cmdIcon {
+    display: block;
+}
+
+.PostLayout {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+    gap: 8px;
+   
+}
+
+.active {
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+.Description {
+    grid-template-columns: 30px auto; 
+    font-size:1.3rem;
+    text-align:justify;
+    max-height: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden; 
+    position: relative;  
+    background:
+    /*trouver ca la: https://dabblet.com/gist/2462915
+    cest pour mettre une ombre quand il overflow (:*/
+        linear-gradient(#eee 30%, rgba(255,255,255,0)),
+        linear-gradient(rgba(255,255,255,0), #eee 70%) 0 100%,
+       
+        radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.5), rgba(0,0,0,0)) 0 100%;
+        background-repeat: no-repeat;
+        background-color: #eee;
+        background-size: 100% 40px, 100% 40px, 100% 15px, 100% 5px;
+    background-attachment: local, local, scroll, scroll;
+}
+
+  
+  .Description.expanded {
+    overflow: visible;
+    white-space: normal;
+    text-overflow: unset;
+    max-height: none;
+  }
+  
+.ImgDate{
+    height: auto;
+    font-size:0.8rem ;
+    color:lightslategrey;
+}
+.PostImgContainer {
+    display: grid;
+}
+.PostImage {
+    max-width:100hv;
+    max-height: 10vh;
+}
+
+.PostTitle {
+    font-size: 1.4rem;
+    font-weight:700;
+    color: black;
+    margin-bottom: 0.5em;
+}
+
+.PostCategory {
+    color: dodgerblue !important;
+}
+
+.PostCommandPanel {
+    display: flex;
+    justify-content: end;
+    height: 10px;
+}
+.TopPanel{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    
+  
+
+}
+
+.PostdeleteForm {
+    margin: 20px;
+}
+#search {
+    display:grid;
+    width: 190px;
+    grid-template-columns: 155px 30px;
+    align-items: center;
+}
+#searchKey {
+    margin:0px !important;
+    padding-left:5px;
+    padding-bottom:5px;
+    padding-right: 10px;
+    height: 32px !important;
+    vertical-align: middle;
+}
